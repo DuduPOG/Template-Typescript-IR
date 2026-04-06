@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "module": "ESNext" /* Specify what module code is generated. */,
-    "moduleResolution": "bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "nodenext" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "module": "nodenext" /* Specify what module code is generated. */,
+    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "lib": ["ESNext", "DOM"],
     "strict": true /* Enable all strict type-checking options. */,
+    "esModuleInterop": true,
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "types": ["vitest/globals"],
     "noEmit": true
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
