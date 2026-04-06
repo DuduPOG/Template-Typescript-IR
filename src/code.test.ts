@@ -1,10 +1,16 @@
 import { describe, it, expect } from 'vitest';
-import { strings, formatado } from './code.ts';
+import { objetos } from './code.ts';
 
-
-it('Teste para concatenar strings de um array usando o método join()', () => {
-  const concatenados = strings.join(' '); // strings = ['Arrays', 'com', 'TypeScript'];
-  expect(concatenados).toEqual(formatado);
+describe('Testes para ordenação de strings de forma decrescente usando o método sort()', () => {
+  // lista original: ['carro', 'boneco', 'ave', 'lapis']
+  it('Ordenando pela ordem alfabética reversa', () => {
+    const alfaReversa = ['lapis', 'carro', 'boneco', 'ave'];
+    expect(alfaReversa).toEqual(objetos.sort( (a, b) => b.localeCompare(a) ));
+  });
+  it('Ordenando pela ordem decrescente das strings', () => {
+    const decrescente = ['boneco', 'lapis', 'carro', 'ave'];
+    expect(decrescente).toEqual(objetos.sort( (a, b) => b.length - a.length ));
+  });
 });
 
 

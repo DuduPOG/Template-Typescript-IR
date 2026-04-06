@@ -1,11 +1,13 @@
 /*
-2. Faça um Programa TypeScript que transforme o array, concatenando as strings com 1 (um) espaço (“ “). Utilize o método JOIN da classe Array, passando uma função arrow como parâmetro.
-2.1 Escreva um teste com o array [‘Arrays’, ‘com’, ‘TypeScript’]
+3. Faça um programa que ordene os elementos de um array. Use o método SORT
+da classe Array para ordenar de forma decrescente, passando uma função arrow como parâmetro.
+3.1 Escreva um teste com o array [‘carro’, ’boneco’, ’ave’, ‘lapis’]
 */
-console.log(`Atividade 2: Transformar um array através da concatenação das strings com 1 (um) espaço (" ") utilizando o método join()\n\n`);
-export const strings = ['Arrays', 'com', 'TypeScript'];
+console.log(`Atividade 3: Ordenar os elementos de um array de forma decrescente usando o método sort()\n\n`);
+export const objetos = ['carro', 'boneco', 'ave', 'lapis'];
 
-export const concatenando = (lista: Array<string>) => lista.join(' ');
-export const formatado = concatenando(strings);
-console.log(`Lista original: ${strings}\n`);
-console.log(`Lista concatenada: ${formatado}`);
+console.log(`Lista original: ${objetos}\n`);
+objetos.sort( (a, b) => b.localeCompare(a) );
+console.log(`Lista ordenada por ordem alfabética reversa: ${objetos}\n`);
+objetos.sort( (a, b) => b.length - a.length );
+console.log(`Lista ordenada pelo tamanho decrescente das strings: ${objetos}`);
