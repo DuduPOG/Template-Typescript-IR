@@ -1,16 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { objetos } from './code.ts';
+import { cortados, numeros } from './code.ts';
 
-describe('Testes para ordenação de strings de forma decrescente usando o método sort()', () => {
-  // lista original: ['carro', 'boneco', 'ave', 'lapis']
-  it('Ordenando pela ordem alfabética reversa', () => {
-    const alfaReversa = ['lapis', 'carro', 'boneco', 'ave'];
-    expect(alfaReversa).toEqual(objetos.sort( (a, b) => b.localeCompare(a) ));
+//describe('', () => {
+  // array de referência: [2, 4, 6, 2, 8, 9, 5]
+  it('Mostrar apenas os dois primeiros elementos de um array usando o método slice()', () => {
+    const sliced = [2, 4];
+    expect(sliced).toEqual(cortados);
   });
-  it('Ordenando pela ordem decrescente das strings', () => {
-    const decrescente = ['boneco', 'lapis', 'carro', 'ave'];
-    expect(decrescente).toEqual(objetos.sort( (a, b) => b.length - a.length ));
-  });
-});
+//});
 
 

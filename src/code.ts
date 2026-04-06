@@ -1,13 +1,11 @@
 /*
-3. Faça um programa que ordene os elementos de um array. Use o método SORT
-da classe Array para ordenar de forma decrescente, passando uma função arrow como parâmetro.
-3.1 Escreva um teste com o array [‘carro’, ’boneco’, ’ave’, ‘lapis’]
+4. Faça um programa que leia o array pegue apenas os dois primeiros elementos. Use o método SLICE da classe Array.
+4.1 Escreva um teste com o array [2,4,6,2,8,9,5]
 */
-console.log(`Atividade 3: Ordenar os elementos de um array de forma decrescente usando o método sort()\n\n`);
-export const objetos = ['carro', 'boneco', 'ave', 'lapis'];
 
-console.log(`Lista original: ${objetos}\n`);
-objetos.sort( (a, b) => b.localeCompare(a) );
-console.log(`Lista ordenada por ordem alfabética reversa: ${objetos}\n`);
-objetos.sort( (a, b) => b.length - a.length );
-console.log(`Lista ordenada pelo tamanho decrescente das strings: ${objetos}`);
+console.log(`Atividade 4: Mostrar apenas os 2 primeiros elementos da lista usando o método slice()\n\n`);
+export const numeros = [2, 4, 6, 2, 8, 9, 5];
+export const cortados = numeros.slice(0, 2);
+
+console.log(`Lista original: ${numeros}\n`);
+console.log(`Apenas os 2 primeiros números: ${cortados}`);
